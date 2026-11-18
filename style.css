@@ -1,0 +1,73 @@
+:root {
+  --bg: #ffffff;
+  --text: #1d1d1f;
+  --muted: #5c5c63;
+  --link: #0b5cad;
+  --rule: #e4e4e8;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; }
+h2 {
+  font-size: 1.2rem;
+  margin: 2.5rem 0 .75rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--rule);
+}
+p { margin: 0 0 1rem; }
+
+.intro {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.intro img {
+  width: 9.5rem;
+  height: 9.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  flex: none;
+}
+.role { color: var(--muted); margin: 0 0 .6rem; }
+.links { margin: 0; }
+.links a { white-space: nowrap; }
+.links span { color: var(--muted); padding: 0 .25rem; }
+
+.news, .pubs, .plain { list-style: none; padding: 0; margin: 0; }
+.news li, .plain li { display: grid; grid-template-columns: 5rem 1fr; margin-bottom: .5rem; }
+.news time, .plain time { color: var(--muted); }
+
+.pubs li { margin-bottom: 1.1rem; }
+.pubs .title { font-weight: 600; }
+.pubs .authors, .pubs .venue { color: var(--muted); font-size: .95rem; display: block; }
+.pubs .me { color: var(--text); font-weight: 600; }
+
+
+footer { margin-top: 3rem; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 36rem) {
+  body { font-size: 16px; }
+  .intro { flex-direction: column; align-items: flex-start; }
+}
