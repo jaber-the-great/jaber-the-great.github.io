@@ -57,7 +57,9 @@ p { margin: 0 0 1rem; }
 
 .news, .pubs, .plain { list-style: none; padding: 0; margin: 0; }
 .news li, .plain li { display: grid; grid-template-columns: 5rem 1fr; margin-bottom: .5rem; }
-.news time, .plain time { color: var(--muted); }
+.news time, .plain time { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
+.news li { margin-bottom: .35rem; }
+.news li + li:has(time:not(:empty)) { margin-top: .9rem; }
 
 .pubs li { margin-bottom: 1.1rem; }
 .pubs .title { font-weight: 600; }
